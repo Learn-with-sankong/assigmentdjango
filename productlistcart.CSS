@@ -32,29 +32,34 @@ body {
       font-size: 14px;
       text-transform: uppercase;
       letter-spacing: 0.03em;
+      text-align: center;
+      vertical-align:middle;
+      
     }
     .table-row {
       background-color: #ffffff;
       box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
       text-align: center;
-      vertical-align:middle;
+      align-items: center;
+      margin: auto;
+      padding: auto;
         
       
     }
     .col-1 {
-      flex-basis: 10%;
+        width: 50%;
       
       
     }
     .col-2 {
-      flex-basis: 40%;
+        width: 100%;
       
     }
     .col-3 {
-      flex-basis: 25%;
+      width: 100%;
     }
     .col-4 {
-      flex-basis: 25%;
+        width: 100%;
     }
     
     @media all and (max-width: 767px) {
@@ -200,8 +205,27 @@ body {
       --bg: #015aff;
     }
   }
-  
-  button {
+  .buttondel {
+    --width: 100px;
+    --height: 50px;
+    border: 0;
+    position: relative;
+    min-width: var(--width);
+    min-height: var(--height);
+    border-radius: var(--height);
+    color: #ffffff;
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 20px;
+    background: rgba(19, 2, 255, 0.199);
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right:100%;
+  }
+  .button1 {
     --width: 200px;
     --height: 50px;
     border: 0;
@@ -289,3 +313,39 @@ body {
       }
     }
   }       
+
+/* btn up and down quantity */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  height: auto;
+}
+.stepper {
+  border: 1px solid #eee;
+  display: inline-block;
+  overflow: visible;
+  height: 1.5em;
+  background: #fff;
+  padding: 1px;
+  
+}
+.stepper input {
+  width: 3em;
+  height: 100%;
+  text-align: center;
+  border: 0;
+  background: transparent;
+  color: #000;
+}
+.stepper button {
+  width: 1.4em;
+  font-weight: 300;
+  height: 100%;
+  line-height: 0.1em;
+  font-size: 1.4em;
+  padding: 0.2em !important;
+  background: #eee;
+  color: #333;
+  border: none;
+}
