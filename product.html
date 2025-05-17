@@ -1,12 +1,13 @@
 {% extends 'Basic.HTML' %}
-{% load static %}
-    <link rel="stylesheet" href="{% static 'style/product.css' %}">
+
 {% block title %}
     Product
 {% endblock title %}
     <link href="https://fonts.googleapis.com/css?family=PT+Sans|Ubuntu:500&display=swap" rel="stylesheet">
 
 {% block content %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'style/product.css' %}">
 <div  style="display: flex; gap: 20px; flex-direction: row; max-width: 990px; margin: auto; flex-wrap: wrap;"> 
     {% for product in myproducts %}
     
